@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Demo } from "./demo";
+import BeautifulDnd from "./react-beautiful-dnd/demo";
+import { colors } from "@atlaskit/theme";
+import { Example } from "./react-beautiful-dnd/example";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <Demo />
+      <Example />
+      {/* <Demo /> */}
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
