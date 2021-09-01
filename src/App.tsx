@@ -1,17 +1,37 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import { Demo } from "./demo";
-import BeautifulDnd from "./react-beautiful-dnd/demo";
-import { colors } from "@atlaskit/theme";
+// import { Demo } from "./demo";
+// import BeautifulDnd from "./react-beautiful-dnd/demo";
+// import { colors } from "@atlaskit/theme";
 import { Example } from "./react-beautiful-dnd/example";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Header } from "@components/shared/header/header.component";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <Example />
+      <Router>
+        <div>
+          <Header />
+
+          {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/example">
+              <About />
+            </Route>
+            <Route path="/users">
+              <Users />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
       {/* <Demo /> */}
 
       {/* <header className="App-header">
@@ -50,3 +70,19 @@ function App() {
 }
 
 export default App;
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return (
+    <h2>
+      <Example />
+    </h2>
+  );
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
