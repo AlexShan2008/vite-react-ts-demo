@@ -4,6 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:dev": "tsc && vite build --mode dev",
+    "build:stg": "tsc && vite build --mode stg",
+    "build:prd": "tsc && vite build --mode prd",
     "serve": "vite preview"
   },
   "dependencies": {
