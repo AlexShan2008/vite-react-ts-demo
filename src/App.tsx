@@ -1,24 +1,22 @@
-import { useState } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Header } from "@components/shared/header/header.component";
+import { Header } from "@components/header/header.component";
+import GlobalStyle from "@theme/global-styles";
+import horseUrl from "@assets/images/horse.png";
 
-const mode = import.meta.env.DEV;
+const mode = import.meta.env.VITE_APP_ENV;
 
 console.log(mode, "mode");
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const a = "";
-
   return (
     <div className="App">
+      <GlobalStyle />
+
       <Router>
         <div>
           <Header />
           <Switch>
-            <Route path="/example">
+            <Route path="/about">
               <About />
             </Route>
             <Route path="/users">
@@ -41,7 +39,18 @@ function Home() {
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (
+    <>
+      <h2>About</h2>
+      <img
+        style={{
+          maxWidth: "100%",
+        }}
+        src={horseUrl}
+        alt="horse"
+      />
+    </>
+  );
 }
 
 function Users() {
