@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 // import { Demo } from "./demo";
@@ -10,6 +10,8 @@ import { Header } from "@components/shared/header/header.component";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  const a = "";
 
   return (
     <div className="App">

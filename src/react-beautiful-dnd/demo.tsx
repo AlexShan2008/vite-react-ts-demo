@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Fragment, Component } from "react";
 import styled from "styled-components";
 import { Droppable, DragDropContext } from "react-beautiful-dnd";
 import { colors } from "@atlaskit/theme";
@@ -152,7 +152,7 @@ export default class BeautifulDnd extends Component<Props, State> {
     );
 
     return (
-      <React.Fragment>
+      <Fragment>
         <DragDropContext onDragStart={this.onDragEnd}>
           {containerHeight ? (
             <ParentContainer height={containerHeight}>{board}</ParentContainer>
@@ -167,7 +167,7 @@ export default class BeautifulDnd extends Component<Props, State> {
             }
           `}
         /> */}
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

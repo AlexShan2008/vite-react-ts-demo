@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import { Component, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 // fake data generator

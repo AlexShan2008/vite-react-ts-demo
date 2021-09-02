@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import styled from "styled-components";
 import { colors } from "@atlaskit/theme";
 import type { DraggableProvided } from "react-beautiful-dnd";
@@ -190,4 +190,4 @@ function QuoteItem(props: Props) {
   );
 }
 
-export default React.memo<Props>(QuoteItem);
+export default memo<Props>(QuoteItem);

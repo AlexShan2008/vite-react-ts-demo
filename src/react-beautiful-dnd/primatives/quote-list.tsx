@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import styled from "styled-components";
 import { colors } from "@atlaskit/theme";
 import QuoteItem from "./quote-item";
@@ -82,7 +82,7 @@ type QuoteListProps = {
   quotes: Quote[];
 };
 
-const InnerQuoteList = React.memo(function InnerQuoteList(
+const InnerQuoteList = memo(function InnerQuoteList(
   props: QuoteListProps
 ) {
   return props.quotes.map((quote: Quote, index: number) => (

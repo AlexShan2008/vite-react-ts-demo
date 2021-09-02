@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "./Container";
 
 import { DndProvider } from "react-dnd";

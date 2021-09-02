@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import update from "immutability-helper";
 import Card from "./Card";
 
