@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Header } from "@components/header/header.component";
 import GlobalStyle from "@theme/global-styles";
 import horseUrl from "@assets/images/horse.png";
+import "@styles/app.scss";
+import "@styles/app.less";
 
 const mode = import.meta.env.VITE_APP_ENV;
 
@@ -9,7 +11,7 @@ console.log(mode, "mode");
 
 function App() {
   return (
-    <div className="App">
+    <div className="app-container">
       <GlobalStyle />
 
       <Router>

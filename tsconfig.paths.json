@@ -6,7 +6,8 @@
       "@theme/*": ["src/theme/*"],
       "@assets/*": ["src/assets/*"],
       "@common/*": ["src/common/*"],
-      "@components/*": ["src/shared/components/*"]
+      "@components/*": ["src/shared/components/*"],
+      "@styles/*": ["src/styles/*"]
     }
   }
 }
