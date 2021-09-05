@@ -3,6 +3,7 @@ import reactRefresh from "@vitejs/plugin-react-refresh";
 import { each, trimEnd } from "lodash";
 import path from "path";
 import pathsAliasJson from "./tsconfig.paths.json";
+import legacy from "@vitejs/plugin-legacy";
 
 function convertTsPathAlias() {
   const pathAlias = {};
@@ -22,13 +23,25 @@ function convertTsPathAlias() {
 }
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [reactRefresh()],
+  plugins: [
+    reactRefresh(),
+    legacy({
+      targets: ["ie >= 11"],
+      additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
+    }),
+  ],
   esbuild: {
     jsxInject: `import React from 'react'`,
   },
   resolve: {
     alias: {
       ...convertTsPathAlias(),
+    },
+  },
+  build: {
+    target: "es6",
+    rollupOptions: {
+      // https://rollupjs.org/guide/en/#big-list-of-options
     },
   },
 });
