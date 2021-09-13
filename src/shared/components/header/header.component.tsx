@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "@assets/images/logo.svg";
 import { HeaderWrapper } from "./header.styled";
 
