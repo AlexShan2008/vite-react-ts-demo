@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-const Home = lazy(() => import("@screen/home/home"));
-const About = lazy(() => import("@screen/about/about"));
-const Users = lazy(() => import("@screen/users/users"));
+const Home = lazy(() => import("@screens/home/home"));
+const About = lazy(() => import("@screens/about/about"));
+const Users = lazy(() => import("@screens/users/users"));
 
 import DefaultLayout from "@shared/components/default-layout/default-layout.component";
 import Spinner from "@shared/components/spinner/spinner.component";

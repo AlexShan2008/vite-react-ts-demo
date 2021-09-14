@@ -8,7 +8,9 @@
       "@common/*": ["src/common/*"],
       "@components/*": ["src/shared/components/*"],
       "@styles/*": ["src/styles/*"],
-      "@screen/*": ["src/screen/*"]
+      "@screens/*": ["src/screens/*"],
+      "@utils/*": ["src/utils/*"],
+      "@services/*": ["src/services/*"]
     }
   }
 }
