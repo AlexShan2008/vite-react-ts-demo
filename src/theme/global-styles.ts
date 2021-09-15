@@ -17,7 +17,9 @@ const GlobalStyle = createGlobalStyle`
   &:root {
     --grey: #e2e2e2;
     --blue: #1e90ff;
-    --white: #ffffff;
+    --white: #fff;
+    --black: #000;
+    --primary: #1e90ff;
   }
 `;
 

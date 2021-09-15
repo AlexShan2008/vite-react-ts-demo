@@ -15,6 +15,16 @@ export const HeaderWrapper = styled.header`
       padding: 10px;
       display: flex;
       justify-content: center;
+
+      a {
+        color: var(--black);
+      }
+
+      &.active {
+        a {
+          color: var(--primary);
+        }
+      }
     }
   }
 `;
